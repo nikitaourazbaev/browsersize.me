@@ -62,7 +62,7 @@ browser-size {
     "Liberation Mono", "Courier New", monospace;
 }
 
-@media ((min-width: 990px)) {
+@media (min-width: 990px) {
   browser-size {
     flex-flow: row wrap;
   }

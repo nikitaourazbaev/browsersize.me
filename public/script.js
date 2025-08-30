@@ -1,9 +1,5 @@
-if (!customElements.get('browser-size')) {
+if (!customElements.get("browser-size")) {
   class BrowserSize extends HTMLElement {
-    constructor() {
-      super();
-    }
-
     connectedCallback() {
       if (!this.isConnected) return;
 
@@ -26,22 +22,21 @@ if (!customElements.get('browser-size')) {
     }
 
     updateUI() {
-      for (const dimension of ['width', 'height']) {
-        this.querySelector(`${dimension}-display`).innerText =
-          this[dimension];
+      for (const dimension of ["width", "height"]) {
+        this.querySelector(`${dimension}-display`).innerText = this[dimension];
       }
     }
 
     setUpResizeListener() {
-      window.addEventListener('resize', this.update.bind(this), {
+      window.addEventListener("resize", this.update.bind(this), {
         passive: true,
       });
     }
 
     cleanUp() {
-      window.removeEventListener('resize', this.update);
+      window.removeEventListener("resize", this.update);
     }
   }
 
-  customElements.define('browser-size', BrowserSize);
+  customElements.define("browser-size", BrowserSize);
 }
