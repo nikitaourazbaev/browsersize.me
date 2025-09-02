@@ -41,7 +41,6 @@ body {
 
 main {
   display: grid;
-  place-content: center;
   min-height: 100dvh;
 }
 
@@ -57,13 +56,29 @@ browser-size {
   font-variant-numeric: tabular-nums;
 }
 
+@media (min-width: 640px) {
+  browser-size {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-content: stretch;
+  }
+
+  width-display,
+  height-display,
+  times-glyph {
+    align-content: center;
+  }
+
+  width-display {
+    text-align: right;
+  }
+
+  height-display {
+    text-align: left;
+  }
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-}
-
-@media (min-width: 990px) {
-  browser-size {
-    flex-flow: row wrap;
-  }
 }
