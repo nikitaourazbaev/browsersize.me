@@ -60,7 +60,7 @@ browser-size {
   browser-size {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    align-content: stretch;
+    align-content: center;
   }
 
   width-display,
