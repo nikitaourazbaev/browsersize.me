@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/opt\/homebrew\/bin\/fish\ncd .\/public\nserve"
+    }
+  }
+}
